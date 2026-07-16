@@ -1,11 +1,11 @@
 .PHONY: build test vet lint install clean coverage
 
-BINARY := cine-cli
+BINARY := cine
 GO := go
 GOFLAGS :=
 
 build:
-	$(GO) build $(GOFLAGS) -o $(BINARY) ./cmd/cine-cli
+	$(GO) build $(GOFLAGS) -o $(BINARY) ./cmd/cine
 
 test:
 	$(GO) test ./... -count=1 -timeout 30s
@@ -17,7 +17,7 @@ lint:
 	golangci-lint run
 
 install:
-	$(GO) install ./cmd/cine-cli
+	$(GO) install $(GOFLAGS) ./cmd/cine
 
 clean:
 	rm -f $(BINARY)
