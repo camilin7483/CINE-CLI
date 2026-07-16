@@ -12,20 +12,20 @@ import (
 )
 
 type Dashboard struct {
-	TotalHoursWatched  float64
-	TotalMovies        int
-	TotalEpisodes      int
-	TotalShows         int
-	FavoriteGenres     map[string]int
-	TopActors          map[string]int
-	MostUsedProviders  map[string]int
-	WeeklyActivity     map[string]int
-	Favorites          int
-	Watchlist          int
-	Downloads          int
-	ContinueWatching   int
-	StreakDays         int
-	MostWatched        string
+	TotalHoursWatched float64
+	TotalMovies       int
+	TotalEpisodes     int
+	TotalShows        int
+	FavoriteGenres    map[string]int
+	TopActors         map[string]int
+	MostUsedProviders map[string]int
+	WeeklyActivity    map[string]int
+	Favorites         int
+	Watchlist         int
+	Downloads         int
+	ContinueWatching  int
+	StreakDays        int
+	MostWatched       string
 
 	db  *database.Store
 	cfg *config.Config

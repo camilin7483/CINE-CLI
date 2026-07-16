@@ -84,8 +84,8 @@ func (p *VLC) Stop() error {
 	return nil
 }
 
-func (p *VLC) Pause() error  { return nil }
-func (p *VLC) Resume() error { return nil }
+func (p *VLC) Pause() error                     { return nil }
+func (p *VLC) Resume() error                    { return nil }
 func (p *VLC) Position() (time.Duration, error) { return 0, nil }
 func (p *VLC) Running() bool {
 	p.mu.Lock()
@@ -120,8 +120,8 @@ func (ps *PlayerSwitch) Stop() error {
 	return nil
 }
 
-func (ps *PlayerSwitch) Name() string { return "player" }
-func (ps *PlayerSwitch) Pause() error { return ps.mpv.Pause() }
-func (ps *PlayerSwitch) Resume() error { return ps.mpv.Resume() }
+func (ps *PlayerSwitch) Name() string                     { return "player" }
+func (ps *PlayerSwitch) Pause() error                     { return ps.mpv.Pause() }
+func (ps *PlayerSwitch) Resume() error                    { return ps.mpv.Resume() }
 func (ps *PlayerSwitch) Position() (time.Duration, error) { return ps.mpv.Position() }
-func (ps *PlayerSwitch) Running() bool { return ps.mpv.Running() || ps.vlc.Running() }
+func (ps *PlayerSwitch) Running() bool                    { return ps.mpv.Running() || ps.vlc.Running() }

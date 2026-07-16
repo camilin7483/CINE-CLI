@@ -45,9 +45,9 @@ func (a *App) favoritesCmd() *cobra.Command {
 			Args:  cobra.MinimumNArgs(2),
 			RunE: func(cmd *cobra.Command, args []string) error {
 				return a.DB.AddFavorite(cmd.Context(), core.Favorite{
-					MediaID:   args[0],
-					Title:     strings.Join(args[1:], " "),
-					AddedAt:   time.Now(),
+					MediaID: args[0],
+					Title:   strings.Join(args[1:], " "),
+					AddedAt: time.Now(),
 				})
 			},
 		},

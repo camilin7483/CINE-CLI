@@ -33,37 +33,37 @@ const visibleItems = 15
 var chars = []string{"⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"}
 
 type model struct {
-	app        *App
-	screen     screen
-	prevScreen screen
-	err        string
-	search     string
-	results    []core.Media
-	trending   []core.Media
-	favs       []core.Favorite
-	watchlist  []core.WatchlistItem
-	history    []core.HistoryEntry
-	continueW  []core.ContinueWatching
-	selected   *core.Media
-	seasons    []core.Season
-	episodes   []core.Episode
-	season     int
-	episode    int
-	cursor     int
-	scrollIdx  int
-	loading    bool
-	detail     bool
-	width      int
-	height     int
-	resolveMsg string
-	isFav      bool
+	app         *App
+	screen      screen
+	prevScreen  screen
+	err         string
+	search      string
+	results     []core.Media
+	trending    []core.Media
+	favs        []core.Favorite
+	watchlist   []core.WatchlistItem
+	history     []core.HistoryEntry
+	continueW   []core.ContinueWatching
+	selected    *core.Media
+	seasons     []core.Season
+	episodes    []core.Episode
+	season      int
+	episode     int
+	cursor      int
+	scrollIdx   int
+	loading     bool
+	detail      bool
+	width       int
+	height      int
+	resolveMsg  string
+	isFav       bool
 	sidebarOpen bool
 	sidebarIdx  int
 	spinnerIdx  int
-	viewMode   string
-	themeSet   bool
-	audioLang  string
-	subsLang   string
+	viewMode    string
+	themeSet    bool
+	audioLang   string
+	subsLang    string
 }
 
 var audioLangs = []string{"en", "es", "ja", "pt", "fr", "de", "it", "ko", "zh", "ar", "ru", "hi", "original"}

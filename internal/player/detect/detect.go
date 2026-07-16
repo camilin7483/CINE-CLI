@@ -7,9 +7,9 @@ import (
 )
 
 type PlayerInfo struct {
-	Name     string `json:"name"`
-	Binary   string `json:"binary"`
-	Priority int    `json:"priority"`
+	Name     string   `json:"name"`
+	Binary   string   `json:"binary"`
+	Priority int      `json:"priority"`
 	Args     []string `json:"args,omitempty"`
 }
 
@@ -17,7 +17,7 @@ var knownPlayers = []PlayerInfo{
 	{Name: "mpv", Binary: "mpv", Priority: 10, Args: []string{"--hwdec=auto"}},
 	{Name: "vlc", Binary: "vlc", Priority: 20, Args: []string{"--play-and-exit"}},
 	{Name: "celluloid", Binary: "celluloid", Priority: 30, Args: nil},
-	{Name: "iina", Binary: "iina", Priority: 40, Args: nil,},
+	{Name: "iina", Binary: "iina", Priority: 40, Args: nil},
 	{Name: "mpc-hc", Binary: "mpc-hc", Priority: 50, Args: nil},
 	{Name: "potplayer", Binary: "PotPlayer", Priority: 60, Args: nil},
 }

@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/cyruzin/golang-tmdb"
 	"github.com/cam/cine-cli/internal/core"
+	"github.com/cyruzin/golang-tmdb"
 )
 
 type Provider struct {
@@ -243,19 +243,19 @@ func convertMovieResult(r tmdb.MovieResult) core.Media {
 
 func convertMovieDetails(m *tmdb.MovieDetails) core.Media {
 	media := core.Media{
-		ID:        fmt.Sprintf("tmdb-%d", m.ID),
-		TMDBID:    int(m.ID),
-		IMDBID:    m.IMDbID,
-		Title:     m.Title,
-		MediaType: core.MediaTypeMovie,
-		Year:      extractYear(m.ReleaseDate),
-		Overview:  m.Overview,
-		PosterURL: posterURL(m.PosterPath),
+		ID:          fmt.Sprintf("tmdb-%d", m.ID),
+		TMDBID:      int(m.ID),
+		IMDBID:      m.IMDbID,
+		Title:       m.Title,
+		MediaType:   core.MediaTypeMovie,
+		Year:        extractYear(m.ReleaseDate),
+		Overview:    m.Overview,
+		PosterURL:   posterURL(m.PosterPath),
 		BackdropURL: posterURL(m.BackdropPath),
-		Rating:    float64(m.VoteMetrics.VoteAverage),
-		Runtime:   m.Runtime,
-		Status:    m.Status,
-		Tagline:   m.Tagline,
+		Rating:      float64(m.VoteMetrics.VoteAverage),
+		Runtime:     m.Runtime,
+		Status:      m.Status,
+		Tagline:     m.Tagline,
 	}
 	for _, g := range m.Genres {
 		media.Genres = append(media.Genres, g.Name)
@@ -278,16 +278,16 @@ func convertTVResult(r tmdb.TVShowResult) core.Media {
 
 func convertTVDetails(tv *tmdb.TVDetails) core.Media {
 	media := core.Media{
-		ID:        fmt.Sprintf("tmdb-%d", tv.ID),
-		TMDBID:    int(tv.ID),
-		Title:     tv.Name,
-		MediaType: core.MediaTypeSeries,
-		Year:      extractYear(tv.FirstAirDate),
-		Overview:  tv.Overview,
-		PosterURL: posterURL(tv.PosterPath),
+		ID:          fmt.Sprintf("tmdb-%d", tv.ID),
+		TMDBID:      int(tv.ID),
+		Title:       tv.Name,
+		MediaType:   core.MediaTypeSeries,
+		Year:        extractYear(tv.FirstAirDate),
+		Overview:    tv.Overview,
+		PosterURL:   posterURL(tv.PosterPath),
 		BackdropURL: posterURL(tv.BackdropPath),
-		Rating:    float64(tv.VoteMetrics.VoteAverage),
-		Status:    tv.Status,
+		Rating:      float64(tv.VoteMetrics.VoteAverage),
+		Status:      tv.Status,
 	}
 	for _, g := range tv.Genres {
 		media.Genres = append(media.Genres, g.Name)

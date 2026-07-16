@@ -172,9 +172,9 @@ func (a *App) printJSON(v interface{}) {
 
 func (a *App) RootCmd() *cobra.Command {
 	root := &cobra.Command{
-		Use:   "cine",
-		Short: "cine-cli — Watch movies and TV shows from your terminal",
-		Long:  `A modern CLI tool for discovering and playing movies and TV series.`,
+		Use:     "cine",
+		Short:   "cine-cli — Watch movies and TV shows from your terminal",
+		Long:    `A modern CLI tool for discovering and playing movies and TV series.`,
 		Version: version,
 		PersistentPreRunE: func(cmd *cobra.Command, args []string) error {
 			if cmd.Flags().Changed("json") {

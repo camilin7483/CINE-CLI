@@ -162,7 +162,7 @@ func (m *model) trendingView() string {
 	m.renderMediaList(&b, m.trending)
 
 	b.WriteString("\n" + s.dim.Render(m.scrollHint(len(m.trending))))
-	b.WriteString("  " + s.dim.Render(i18n.T("tui.move") + " · " + i18n.T("tui.enter_play") + " · " + i18n.T("tui.esc_back") + " · " + i18n.T("tui.help_question")))
+	b.WriteString("  " + s.dim.Render(i18n.T("tui.move")+" · "+i18n.T("tui.enter_play")+" · "+i18n.T("tui.esc_back")+" · "+i18n.T("tui.help_question")))
 	return b.String()
 }
 
@@ -185,7 +185,7 @@ func (m *model) resultsView() string {
 
 	if len(m.results) == 0 {
 		b.WriteString(s.dim.Render(i18n.T("tui.no_results")))
-		b.WriteString("\n\n" + s.dim.Render(i18n.T("tui.esc_back") + " · " + i18n.T("tui.help_question")))
+		b.WriteString("\n\n" + s.dim.Render(i18n.T("tui.esc_back")+" · "+i18n.T("tui.help_question")))
 		return b.String()
 	}
 
@@ -198,7 +198,7 @@ func (m *model) resultsView() string {
 	} else {
 		m.renderMediaList(&b, m.results)
 		b.WriteString("\n" + s.dim.Render(m.scrollHint(len(m.results))))
-		b.WriteString("  " + s.dim.Render(i18n.T("tui.move") + " · " + i18n.T("tui.enter_play") + " · B browser · tab split · F fav · D download · " + i18n.T("tui.s_menu") + " · " + i18n.T("tui.esc_back") + " · " + i18n.T("tui.help_question")))
+		b.WriteString("  " + s.dim.Render(i18n.T("tui.move")+" · "+i18n.T("tui.enter_play")+" · B browser · tab split · F fav · D download · "+i18n.T("tui.s_menu")+" · "+i18n.T("tui.esc_back")+" · "+i18n.T("tui.help_question")))
 	}
 
 	return b.String()

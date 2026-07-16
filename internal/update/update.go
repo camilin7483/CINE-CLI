@@ -30,10 +30,10 @@ type Release struct {
 }
 
 type Checker struct {
-	client    *http.Client
+	client         *http.Client
 	currentVersion string
-	repoOwner string
-	repoName  string
+	repoOwner      string
+	repoName       string
 }
 
 func New(currentVersion string) *Checker {

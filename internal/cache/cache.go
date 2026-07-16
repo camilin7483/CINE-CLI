@@ -8,8 +8,8 @@ import (
 )
 
 type Item struct {
-	Value      interface{} `json:"value"`
-	ExpiresAt  time.Time   `json:"expires_at"`
+	Value     interface{} `json:"value"`
+	ExpiresAt time.Time   `json:"expires_at"`
 }
 
 type MemoryCache struct {
@@ -102,9 +102,9 @@ type Store interface {
 }
 
 type TwoLayerCache struct {
-	mem    *MemoryCache
-	store  Store
-	ttl    time.Duration
+	mem   *MemoryCache
+	store Store
+	ttl   time.Duration
 }
 
 func NewTwoLayerCache(mem *MemoryCache, store Store, ttl time.Duration) *TwoLayerCache {

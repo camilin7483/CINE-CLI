@@ -49,9 +49,9 @@ type tvmazeShow struct {
 	Rating struct {
 		Average *float64 `json:"average"`
 	} `json:"rating"`
-	Genres []string `json:"genres"`
-	Runtime int     `json:"runtime"`
-	Status  string  `json:"status"`
+	Genres  []string `json:"genres"`
+	Runtime int      `json:"runtime"`
+	Status  string   `json:"status"`
 	Network *struct {
 		Name string `json:"name"`
 	} `json:"network"`
@@ -224,17 +224,17 @@ func (p *Provider) GetTrending(ctx context.Context, mediaType core.MediaType, pa
 	}
 
 	var schedule []struct {
-		ID        int    `json:"id"`
-		Name      string `json:"name"`
-		Season    int    `json:"season"`
-		Number    int    `json:"number"`
-		Airdate   string `json:"airdate"`
-		AirTime   string `json:"airtime"`
-		Airstamp  string `json:"airstamp"`
-		Runtime   int    `json:"runtime"`
-		Summary   string `json:"summary"`
-		Show      tvmazeShow `json:"show"`
-		Image     *struct {
+		ID       int        `json:"id"`
+		Name     string     `json:"name"`
+		Season   int        `json:"season"`
+		Number   int        `json:"number"`
+		Airdate  string     `json:"airdate"`
+		AirTime  string     `json:"airtime"`
+		Airstamp string     `json:"airstamp"`
+		Runtime  int        `json:"runtime"`
+		Summary  string     `json:"summary"`
+		Show     tvmazeShow `json:"show"`
+		Image    *struct {
 			Medium   string `json:"medium"`
 			Original string `json:"original"`
 		} `json:"image"`

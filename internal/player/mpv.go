@@ -110,8 +110,8 @@ func (p *MPV) Stop() error {
 	return nil
 }
 
-func (p *MPV) Pause() error  { return nil }
-func (p *MPV) Resume() error { return nil }
+func (p *MPV) Pause() error                     { return nil }
+func (p *MPV) Resume() error                    { return nil }
 func (p *MPV) Position() (time.Duration, error) { return 0, nil }
 func (p *MPV) Running() bool {
 	p.mu.Lock()

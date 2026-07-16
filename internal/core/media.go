@@ -10,22 +10,22 @@ const (
 )
 
 type Media struct {
-	ID          string    `json:"id"`
-	TMDBID      int       `json:"tmdb_id"`
-	IMDBID      string    `json:"imdb_id"`
-	Title       string    `json:"title"`
-	OriginalTitle string  `json:"original_title"`
-	MediaType   MediaType `json:"media_type"`
-	Year        int       `json:"year"`
-	Overview    string    `json:"overview"`
-	PosterURL   string    `json:"poster_url"`
-	BackdropURL string    `json:"backdrop_url"`
-	Rating      float64   `json:"rating"`
-	Genres      []string  `json:"genres"`
-	Runtime     int       `json:"runtime"`
-	Status      string    `json:"status"`
-	Tagline     string    `json:"tagline"`
-	ProviderIDs map[string]string `json:"provider_ids,omitempty"`
+	ID            string            `json:"id"`
+	TMDBID        int               `json:"tmdb_id"`
+	IMDBID        string            `json:"imdb_id"`
+	Title         string            `json:"title"`
+	OriginalTitle string            `json:"original_title"`
+	MediaType     MediaType         `json:"media_type"`
+	Year          int               `json:"year"`
+	Overview      string            `json:"overview"`
+	PosterURL     string            `json:"poster_url"`
+	BackdropURL   string            `json:"backdrop_url"`
+	Rating        float64           `json:"rating"`
+	Genres        []string          `json:"genres"`
+	Runtime       int               `json:"runtime"`
+	Status        string            `json:"status"`
+	Tagline       string            `json:"tagline"`
+	ProviderIDs   map[string]string `json:"provider_ids,omitempty"`
 }
 
 type MediaRef struct {
@@ -56,13 +56,13 @@ type Episode struct {
 }
 
 type Stream struct {
-	URL        string `json:"url"`
-	Referer    string `json:"referer"`
-	UserAgent  string `json:"user_agent"`
-	Subtitles  []Subtitle `json:"subtitles"`
-	Quality    string `json:"quality"`
-	Provider   string `json:"provider"`
-	IsM3U8     bool   `json:"is_m3u8"`
+	URL       string     `json:"url"`
+	Referer   string     `json:"referer"`
+	UserAgent string     `json:"user_agent"`
+	Subtitles []Subtitle `json:"subtitles"`
+	Quality   string     `json:"quality"`
+	Provider  string     `json:"provider"`
+	IsM3U8    bool       `json:"is_m3u8"`
 }
 
 type Subtitle struct {
@@ -118,8 +118,8 @@ type HistoryFilter struct {
 }
 
 type HistoryStats struct {
-	TotalShows   int `json:"total_shows"`
-	TotalMovies  int `json:"total_movies"`
+	TotalShows    int `json:"total_shows"`
+	TotalMovies   int `json:"total_movies"`
 	TotalEpisodes int `json:"total_episodes"`
 }
 
@@ -144,13 +144,13 @@ type Favorite struct {
 }
 
 type PlayOptions struct {
-	StreamURL    string
-	Referer      string
-	UserAgent    string
-	Subtitles    []Subtitle
-	Title        string
-	Player       string
-	ExtraArgs    []string
+	StreamURL     string
+	Referer       string
+	UserAgent     string
+	Subtitles     []Subtitle
+	Title         string
+	Player        string
+	ExtraArgs     []string
 	PreferredLang string
 	SubsLang      string
 }
