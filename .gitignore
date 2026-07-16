@@ -1,0 +1,33 @@
+# Binaries
+cine
+cine.exe
+*.test
+*.out
+*.exe
+*.tar.gz
+
+# Build
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+vendor/
+
+# Config
+config.yaml
+*.db
+
+# Temp
+tmp/
+*.log
